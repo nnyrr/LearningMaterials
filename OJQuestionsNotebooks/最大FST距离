@@ -1,0 +1,7 @@
+https://www.nowcoder.com/practice/6295f81acd1b4fb59c8beed92577f64b?tpId=385&tqId=10609994&sourceUrl=%2Fexam%2Foj%3FquestionJobId%3D10%26subTabName%3Donline_coding_page
+
+额 这题呢 看到绝对值就可以摘掉了。
+求所有的dist(i, j)的最大值，dist(i, j)只有（2^2）=四种情况，
+也即i*i-j*j+A[i]*A[i]-A[j]*A[j]、i*i-j*j+A[j]*A[j]-A[i][i]、j*j-i*i+A[i]*A[i]-A[j]*A[j]、j*j-i*i+A[j]*A[j]-A[i][i]
+后面两种情况是前面情况的相反数，排序后得到的情况一样，所有总共就只有两种情况。
+那么我们只要求f(i) = i*i+Ai*Ai 的极差和g(i)=i*i-Ai*Ai的极差就好了。
